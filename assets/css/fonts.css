@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'Alice';
+    src: local('Alice'), url('~/assets/fonts/alice.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Ametist';
+    src: local('Ametist'), url('~/assets/fonts/ametist.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Izis';
+    src: local('Izis'), url('~/assets/fonts/izis-one.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Olympia';
+    src: local('Olympia'), url('~/assets/fonts/olympia-deco.ttf') format('truetype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Seminaria';
+    src: local('Seminaria'), url('~/assets/fonts/seminaria.ttf') format('truetype');
+    font-display: swap;
+}
