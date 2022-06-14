@@ -99,6 +99,7 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     '@/assets/css/fonts.css',
+    '@/assets/css/style.css'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
@@ -120,12 +121,49 @@ export default {
           backgroundImage: {
             'main-page': "url('@/assets/img/time-bg.jpg')"
           },
+          colors: {
+            'yellow-orange' : '#F4AD76'
+          },
           fontFamily: {
             'alice': ['Alice'],
             'ametist': ['Ametist'],
             'izis': ['Izis'],
             'olympia': ['Olympia'],
-            'seminaria': ['Seminaria']
+            'seminaria': ['Seminaria'],
+            'kelly': ['Kelly'],
+            'impact': ['Impact']
+          },
+          width: {
+            '84': '21rem',
+            '88': '22rem',
+            '104': '26rem',
+            '112': '28rem',
+            '120': '30rem',
+            '128': '32rem',
+            '136': '34rem',
+            '144': '36rem',
+            '152': '38rem',
+            '160': '40rem',
+            '168': '42rem',
+            '176': '44rem',
+            '184': '46rem',
+            '192': '48rem'
+          },
+          height: {
+            '84': '21rem',
+            '88': '22rem',
+            '104': '26rem',
+            '112': '28rem',
+            '120': '30rem',
+            '128': '32rem',
+            '136': '34rem',
+            '144': '36rem',
+            '152': '38rem',
+            '160': '40rem',
+            '168': '42rem',
+            '176': '44rem',
+            '184': '46rem',
+            '192': '48rem'
           },
           fontSize: {
             '10xl': '10rem',

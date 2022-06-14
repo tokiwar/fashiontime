@@ -27,3 +27,15 @@
     src: local('Seminaria'), url('~/assets/fonts/seminaria.ttf') format('truetype');
     font-display: swap;
 }
+
+@font-face {
+  font-family: 'Kelly';
+  src: local('Kelly'), url('~/assets/fonts/kelly.ttf') format('truetype');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Impact';
+  src: local('Impact'), url('~/assets/fonts/impact.ttf') format('truetype');
+  font-display: swap;
+}
