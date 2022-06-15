@@ -1,6 +1,6 @@
 <template>
   <div class="h-screen w-full">
-    <Header class="fixed top-0 left-0 w-full glassmorphism"/>
+    <Header class="fixed top-0 left-0 w-full glassmorphism z-10"/>
     <main>
       <Nuxt/>
     </main>

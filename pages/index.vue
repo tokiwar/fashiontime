@@ -1,6 +1,14 @@
 <template>
   <div>
     <ParallaxSection v-if="$device.isDesktop" :section-data="sectionData"/>
+    <about/>
+    <services/>
+    <gallery/>
+    <feedback/>
+    <contacts/>
+    <client-only>
+      <store-map/>
+    </client-only>
   </div>
 </template>
 

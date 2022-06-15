@@ -1,7 +1,7 @@
 <template>
-  <section>
+  <div>
     Страница галереи
-  </section>
+  </div>
 </template>
 <script>
 export default {

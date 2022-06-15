@@ -103,7 +103,11 @@ export default {
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+    {src: '@/plugins/ymapPlugin.js', ssr: false},
+    {src: '@/plugins/simple-validator.js', ssr: true},
+    {src: '@/plugins/v-mask.js', ssr: true},
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -119,10 +123,18 @@ export default {
       theme: {
         extend: {
           backgroundImage: {
-            'main-page': "url('@/assets/img/time-bg.jpg')"
+            'main-page': "url('@/assets/img/time-bg.jpg')",
+            'main-services': "url('@/assets/img/bg-mustache.jpg')"
+          },
+          inset: {
+            '1/20': '5%',
+            '1/10': '10%',
+            '3/10': '15%',
+            '1/5': '20%'
           },
           colors: {
-            'yellow-orange' : '#F4AD76'
+            'yellow-orange': '#F4AD76',
+            'yellow-dark': '#B88355'
           },
           fontFamily: {
             'alice': ['Alice'],
@@ -163,7 +175,14 @@ export default {
             '168': '42rem',
             '176': '44rem',
             '184': '46rem',
-            '192': '48rem'
+            '192': '48rem',
+            'screen-25': '25vh',
+            'screen-35': '35vh',
+            'screen-45': '45vh',
+            'screen-50': '50vh',
+            'screen-75': '75vh',
+            'screen-80': '80vh',
+            'screen-85': '85vh'
           },
           fontSize: {
             '10xl': '10rem',
@@ -206,7 +225,12 @@ export default {
       lang: 'en'
     }
   },
-
+  robots: {
+    UserAgent: '*',
+    Disallow: [
+      '/'
+    ]
+  },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     extend(config, {isClient}) {

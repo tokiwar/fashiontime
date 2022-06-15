@@ -1,7 +1,7 @@
 <template>
-  <section>
+  <div>
     Страница о нас
-  </section>
+  </div>
 </template>
 <script>
 export default {

@@ -1,6 +1,5 @@
 <template>
   <div class="flex flex-row space-x-16">
-    <logo class="h-20 w-20" :scissors="'#fffbeb'" :clock="'#fffbeb'"/>
     <div v-if="menu" itemscope itemtype="http://www.schema.org/SiteNavigationElement"
          class="flex flex-row items-center justify-center text-3xl text-yellow-50 space-x-12 font-kelly">
       <nuxt-link v-for="menuItem in menu" :key="menuItem.key" :to="menuItem.link"
