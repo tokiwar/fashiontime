@@ -1,10 +1,42 @@
 <template>
   <div>
-    Страница галереи
+    <top-section :section-data="SectionData">
+      <breadcrumbs :routes="routes"/>
+    </top-section>
+    <section class="h-screen">
+      asdasddf
+    </section>
   </div>
 </template>
 <script>
 export default {
-  name: 'GalleryPage'
+  name: 'GalleryPage',
+  data: () => ({
+    SectionData: {
+      text: 'Галерея',
+      setTextH1: true
+    }
+  }),
+  async asyncData({$axios, route}) {
+    const routes = [
+      {
+        key: 0,
+        name: 'Главная',
+        route: '/',
+        position: 1
+      },
+      {
+        key: 1,
+      },
+      {
+        key: 2,
+        name: 'Галерея',
+        route: '/gallery/',
+        current: true,
+        position: 2
+      }
+    ];
+    return {routes}
+  },
 }
 </script>
