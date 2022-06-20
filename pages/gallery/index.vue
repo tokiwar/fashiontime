@@ -1,7 +1,9 @@
 <template>
   <div>
     <top-section :section-data="SectionData">
-      <breadcrumbs :routes="routes"/>
+      <template v-slot:breadcrumbs>
+        <breadcrumbs :routes="routes"/>
+      </template>
     </top-section>
     <section class="h-screen">
       asdasddf

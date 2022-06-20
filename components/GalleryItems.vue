@@ -1,7 +1,7 @@
 <template>
   <div class="grid grid-cols-3 grid-rows-auto gap-4">
     <div v-for="item in items" :key="item.key" class="w-72 h-72 cursor-pointer">
-      <img class="h-full w-full object-cover" :src="item.img"/>
+      <img class="h-full w-full object-cover rounded-md" :src="item.img"/>
     </div>
   </div>
 </template>
