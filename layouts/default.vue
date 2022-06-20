@@ -1,6 +1,7 @@
 <template>
   <div class="h-screen w-full">
-    <Header class="fixed top-0 left-0 w-full glassmorphism z-10"/>
+    <Header class="fixed top-0 left-0 w-full z-10"
+            :class="{'glassmorphism' : $route.path === '/', 'bg-header' : $route.path !== '/'}"/>
     <main>
       <Nuxt/>
     </main>

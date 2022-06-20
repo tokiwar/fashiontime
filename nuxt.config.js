@@ -122,6 +122,9 @@ export default {
     config: {
       theme: {
         extend: {
+          maxWidth: {
+            '1/2': '50%'
+          },
           backgroundImage: {
             'main-page': "url('@/assets/img/time-bg.jpg')",
             'main-services': "url('@/assets/img/bg-mustache.jpg')"
@@ -134,7 +137,11 @@ export default {
           },
           colors: {
             'yellow-orange': '#F4AD76',
-            'yellow-dark': '#B88355'
+            'yellow-dark': '#B88355',
+            'header' : '#493325',
+            'sub-header' : '#E5BE8E',
+            'section' : '#FFF5E9',
+            'section-gray' : '#DFE0DF'
           },
           fontFamily: {
             'alice': ['Alice'],

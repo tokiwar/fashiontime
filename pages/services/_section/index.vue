@@ -21,6 +21,50 @@ export default {
     console.log(sectionPageUrl);
     const section = {
       img: require('@/assets/img/galleryItem.jpg'),
+      sections: [
+        {
+          key: 0,
+          text: 'Стрижка',
+          link: '/services/parikmakherskie-uslugi/strizhka/',
+          icon: ''
+        },
+        {
+          key: 1,
+          text: 'Окрашивание волос',
+          link: '/services/parikmakherskie-uslugi/okrashivanie-volos/',
+          icon: ''
+        },
+        {
+          key: 2,
+          text: 'Уход, лечение, диагностика',
+          link: '/services/parikmakherskie-uslugi/ukhod-lechenie-diagnostika/',
+          icon: ''
+        },
+        {
+          key: 3,
+          text: 'Укладка',
+          link: '/services/parikmakherskie-uslugi/ukladka/',
+          icon: ''
+        },
+        {
+          key: 4,
+          text: 'Прически',
+          link: '/services/parikmakherskie-uslugi/pricheski/',
+          icon: ''
+        },
+        {
+          key: 5,
+          text: 'Биозавивка волос',
+          link: '/services/parikmakherskie-uslugi/biozavivka-volos/',
+          icon: ''
+        },
+        {
+          key: 6,
+          text: 'Кератиновое выпрямление волос',
+          link: '/services/parikmakherskie-uslugi/keratinovoe-vypryamlenie-volos/',
+          icon: ''
+        },
+      ],
       links: [
         {
           key: 0,

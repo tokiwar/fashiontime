@@ -26,7 +26,7 @@ export default {
   data: () => ({
     sectionData: {
       bg: '',
-      bgImage: require('@/assets/img/main-page.jpg'),
+      bgImage: require('@/assets/img/main-page-2.jpg'),
       setTextH1: true
     }
   })
