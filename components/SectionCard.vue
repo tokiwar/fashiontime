@@ -6,9 +6,8 @@
     </nuxt-link>
     <ul class="w-2/6 flex flex-col justify-center items-start space-y-1">
       <li v-for="li in item.list" :key="li.key">
-        <nuxt-link :to="li.link" class="underline hover:no-underline text-lg hover:text-header">{{
-            li.text
-          }}
+        <nuxt-link :to="li.link" class="underline hover:no-underline text-lg hover:text-header flex flex-row justify-center items-center">
+          <span>{{ li.text }}</span>
         </nuxt-link>
       </li>
     </ul>

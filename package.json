@@ -21,6 +21,7 @@
     "@nuxtjs/robots": "^2.5.0",
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/svg": "^0.4.0",
+    "@nuxtjs/svg-sprite": "^0.5.2",
     "@nuxtjs/tailwindcss": "^4.2.1",
     "@nuxtjs/yandex-metrika": "^1.4.0",
     "concurrently": "^7.0.0",
