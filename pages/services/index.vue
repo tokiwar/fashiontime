@@ -70,13 +70,7 @@ export default {
             text: 'Укладка волос',
             link: '/services/parikmakherskie-uslugi/ukladka-volos/',
             icon: ''
-          },
-          {
-            key: 8,
-            text: 'Уход и лечение',
-            link: '/services/parikmakherskie-uslugi/ukhod-i-lechenie/',
-            icon: ''
-          },
+          }
         ]
       },
       {

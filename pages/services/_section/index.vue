@@ -69,12 +69,6 @@ export default {
             link: '/services/parikmakherskie-uslugi/ukladka-volos/',
             icon: 'ukladka-volos'
           },
-          {
-            key: 8,
-            text: 'Уход и лечение',
-            link: '/services/parikmakherskie-uslugi/ukhod-i-lechenie/',
-            icon: 'ukhod-i-lechenie'
-          },
         ],
         routes: [
           {
@@ -175,6 +169,44 @@ export default {
             position: 3
           },
         ],
+        sections: [
+          {
+            key: 0,
+            text: 'Маникюр',
+            link: '/services/nogtevoy-servis/manikyur/',
+            icon: 'manicure_2'
+          },
+          {
+            key: 1,
+            text: 'Педикюр',
+            link: '/services/nogtevoy-servis/pedikyur/',
+            icon: 'pedicure'
+          },
+          {
+            key: 2,
+            text: 'Покрытие ногтей',
+            link: '/services/nogtevoy-servis/pokrytie-nogtey/',
+            icon: 'nails'
+          },
+          {
+            key: 3,
+            text: 'Наращивание ногтей',
+            link: '/services/nogtevoy-servis/narashchivanie-nogtey/',
+            icon: 'zhenskie-strizhki'
+          },
+          {
+            key: 4,
+            text: 'Медицинский педикюр',
+            link: '/services/nogtevoy-servis/meditsinskiy-pedikyur/',
+            icon: 'zhenskie-strizhki'
+          },
+          {
+            key: 5,
+            text: 'Уход и лечение',
+            link: '/services/nogtevoy-servis/ukhod-i-lechenie/',
+            icon: 'zhenskie-strizhki'
+          },
+        ],
         links: [
           {
             key: 0,
@@ -183,26 +215,105 @@ export default {
             icon: 'ruble'
           },
           {
-            key: 1,
+            key: 0,
             main: 'Бесплатная консультация',
             sub: '',
-            icon: 'premium'
+            icon: 'free'
           },
           {
             key: 1,
             main: 'Стерильное оборудование',
             sub: '',
-            icon: 'free'
+            icon: 'manicure'
           },
           {
             key: 3,
             main: 'Материалы премиум класса',
             sub: '',
-            icon: 'care'
+            icon: 'premium_hands'
           },
         ],
       },
-      'ostalnye-uslugi': {}
+      'ostalnye-uslugi': {
+        img: require('@/assets/img/hands_3.png'),
+        data: {
+          text: 'Остальные услуги',
+          setTextH1: true,
+        },
+        sections: [
+          {
+            key: 0,
+            text: 'Брови',
+            link: '/services/ostalnye-uslugi/brovi/',
+            icon: 'zhenskie-strizhki'
+          },
+          {
+            key: 1,
+            text: 'Макияж',
+            link: '/services/ostalnye-uslugi/makiyazh/',
+            icon: 'muzhskie-strizhki'
+          },
+          {
+            key: 2,
+            text: 'Ресницы',
+            link: '/services/ostalnye-uslugi/resnitsy/',
+            icon: 'oformlenie-borody'
+          },
+        ],
+        routes: [
+          {
+            key: 0,
+            name: 'Главная',
+            route: '/',
+            position: 1
+          },
+          {
+            key: 1,
+          },
+          {
+            key: 2,
+            name: 'Услуги',
+            route: '/services/',
+            position: 2
+          },
+          {
+            key: 3,
+          },
+          {
+            key: 2,
+            name: 'Остальные услуги',
+            route: '/services/ostalnye-uslugi/',
+            current: true,
+            position: 3
+          },
+        ],
+        links: [
+          {
+            key: 0,
+            main: 'Бесплатная консультация',
+            sub: '',
+            icon: 'free'
+          },
+          {
+            key: 1,
+            main: 'Профессиональная косметика',
+            sub: '',
+            icon: 'premium_other'
+          },
+          {
+            key: 2,
+            main: 'Стерильное оборудование и инструменты',
+            sub: '',
+            icon: 'clean'
+          },
+          {
+            key: 3,
+            main: 'Сертифицированные мастера',
+            sub: '',
+            icon: 'cert'
+          }
+        ],
+      }
     };
     const SectionData = sections[sectionPageUrl].data;
     const section = sections[sectionPageUrl];
