@@ -10,3 +10,20 @@
   -webkit-backdrop-filter: blur(8px);
 }
 
+.fade-enter-active, .fade-leave-active {
+  transition: opacity 0.5s;
+}
+
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+.hamburger {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+  touch-action: none;
+  -ms-touch-action: none;
+}

@@ -1,7 +1,8 @@
 <template>
   <header class="select-none flex items-center justify-center" itemscope itemtype="https://schema.org/WPHeader"
           :class="{'h-24' :$device.isDesktopOrTablet, 'h-16' :$device.isMobile}">
-    <div class="absolute left-1/20 my-auto flex flex-row justify-center items-center space-x-4">
+    <div class="flex flex-row justify-center items-center space-x-4"
+         :class="{'absolute left-1/20 my-auto' : $device.isDesktopOrTablet}">
       <logo :class="{'h-20 w-20' : $device.isDesktopOrTablet, 'h-12 w-12' : $device.isMobile}" :scissors="'#fffbeb'"
             :clock="'#fffbeb'"/>
       <span class="text-yellow-50 font-kelly"
