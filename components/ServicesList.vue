@@ -9,12 +9,14 @@
   <div class="flex flex-row justify-center items-center w-full" v-else>
     <swiper :options="swiperOptions" v-if="items">
       <swiper-slide v-for="item in items" :key="item.key">
-        <nuxt-link :to="item.link" class="relative">
-          <div class="flex flex-col justify-center items-center w-11/12 mx-auto relative">
-            <img :src="item.img" :alt="item.text" :title="item.text" height="400" width="400"/>
-            <span class="absolute bottom-4 left-4 text-base bg-white py-2 px-4 uppercase rounded-md">{{
-                item.text
-              }}</span>
+        <nuxt-link :to="item.link" class="relative flex items-center justify-center">
+          <div class="flex flex-col justify-center items-center w-11/12 relative">
+            <div class="relative h-auto w-auto">
+              <img :src="item.img" :alt="item.text" :title="item.text" height="400" width="400"/>
+              <span class="absolute bottom-4 left-4 text-base bg-white py-2 px-4 uppercase rounded-md">{{
+                  item.text
+                }}</span>
+            </div>
           </div>
         </nuxt-link>
       </swiper-slide>

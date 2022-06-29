@@ -1,7 +1,8 @@
 <template>
   <nav v-if="routes">
-    <ul class="w-max flex flex-row space-x-4 text-xl font-sans font-bold" itemscope
-        itemtype="https://schema.org/BreadcrumbList">
+    <ul class="w-max flex flex-row font-sans font-bold"
+        :class="{'space-x-4 text-xl' : $device.isDesktopOrTablet || mobileLandscape, 'text-base space-x-2' : mobilePortrait}"
+        itemscope itemtype="https://schema.org/BreadcrumbList">
       <li v-for="route in routes" :key="route.key"
           :itemprop="route.name ? 'itemListElement' : false"
           :itemscope="route.name ? 'itemscope' : false"
@@ -21,6 +22,14 @@
 <script>
 export default {
   name: 'Breadcrumbs',
-  props: ['routes']
+  props: ['routes'],
+  computed: {
+    mobilePortrait() {
+      return this.$device.isMobile && this.$mq === 'sm';
+    },
+    mobileLandscape() {
+      return this.$device.isMobile && this.$mq === 'md'
+    }
+  }
 }
 </script>
