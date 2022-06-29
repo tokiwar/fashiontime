@@ -24,50 +24,58 @@ export default {
           {
             key: 0,
             text: 'Женские стрижки',
-            link: '/services/parikmakherskie-uslugi/zhenskie-strizhki/',
-            icon: 'zhenskie-strizhki'
+            link: '/services/parikmakherskie-uslugi/',
+            icon: 'zhenskie-strizhki',
+            hash: 'zhenskie-strizhki'
           },
           {
             key: 1,
             text: 'Мужские стрижки',
-            link: '/services/parikmakherskie-uslugi/muzhskie-strizhki/',
-            icon: 'muzhskie-strizhki'
+            link: '/services/parikmakherskie-uslugi/',
+            icon: 'muzhskie-strizhki',
+            hash: 'muzhskie-strizhki'
           },
           {
             key: 2,
             text: 'Оформление бороды',
-            link: '/services/parikmakherskie-uslugi/oformlenie-borody/',
-            icon: 'oformlenie-borody'
+            link: '/services/parikmakherskie-uslugi/',
+            icon: 'oformlenie-borody',
+            hash: 'oformlenie-borody'
           },
           {
             key: 3,
             text: 'Детские стрижки',
-            link: '/services/parikmakherskie-uslugi/detskie-strizhki/',
-            icon: 'detskie-strizhki'
+            link: '/services/parikmakherskie-uslugi/',
+            icon: 'detskie-strizhki',
+            hash: 'detskie-strizhki'
           },
           {
             key: 4,
             text: 'Окрашивание волос',
-            link: '/services/parikmakherskie-uslugi/okrashivanie-volos/',
-            icon: 'okrashivanie-volos'
+            link: '/services/parikmakherskie-uslugi/',
+            icon: 'okrashivanie-volos',
+            hash: 'okrashivanie-volos'
           },
           {
             key: 5,
             text: 'Химическая завивка',
-            link: '/services/parikmakherskie-uslugi/khimicheskaya-zavivka/',
-            icon: 'khimicheskaya-zavivka'
+            link: '/services/parikmakherskie-uslugi/',
+            icon: 'khimicheskaya-zavivka',
+            hash: 'khimicheskaya-zavivka'
           },
           {
             key: 6,
             text: 'Кератиновое выпрямление',
-            link: '/services/parikmakherskie-uslugi/keratinovoe-vypryamlenie/',
-            icon: 'keratinovoe-vypryamlenie'
+            link: '/services/parikmakherskie-uslugi/',
+            icon: 'keratinovoe-vypryamlenie',
+            hash: 'keratinovoe-vypryamlenie'
           },
           {
             key: 7,
             text: 'Укладка волос',
-            link: '/services/parikmakherskie-uslugi/ukladka-volos/',
-            icon: 'ukladka-volos'
+            link: '/services/parikmakherskie-uslugi/',
+            icon: 'ukladka-volos',
+            hash: 'ukladka-volos'
           },
         ],
         routes: [
@@ -90,7 +98,7 @@ export default {
             key: 3,
           },
           {
-            key: 2,
+            key: 4,
             name: 'Парикмахерские услуги',
             route: '/services/parikmakherskie-uslugi/',
             current: true,
@@ -162,7 +170,7 @@ export default {
             key: 3,
           },
           {
-            key: 2,
+            key: 4,
             name: 'Ногтевой сервис',
             route: '/services/nogtevoy-servis/',
             current: true,
@@ -173,38 +181,44 @@ export default {
           {
             key: 0,
             text: 'Маникюр',
-            link: '/services/nogtevoy-servis/manikyur/',
-            icon: 'manicure_2'
+            link: '/services/nogtevoy-servis/',
+            icon: 'manicure_2',
+            hash: 'manikyur'
           },
           {
             key: 1,
             text: 'Педикюр',
-            link: '/services/nogtevoy-servis/pedikyur/',
-            icon: 'pedicure'
+            link: '/services/nogtevoy-servis/',
+            icon: 'pedicure',
+            hash: 'pedikyur'
           },
           {
             key: 2,
             text: 'Покрытие ногтей',
-            link: '/services/nogtevoy-servis/pokrytie-nogtey/',
-            icon: 'nails'
+            link: '/services/nogtevoy-servis/',
+            icon: 'nails',
+            hash: 'pokrytie-nogtey'
           },
           {
             key: 3,
             text: 'Наращивание ногтей',
-            link: '/services/nogtevoy-servis/narashchivanie-nogtey/',
-            icon: 'zhenskie-strizhki'
+            link: '/services/nogtevoy-servis/',
+            icon: 'nails_2',
+            hash: 'narashchivanie-nogtey'
           },
           {
             key: 4,
             text: 'Медицинский педикюр',
-            link: '/services/nogtevoy-servis/meditsinskiy-pedikyur/',
-            icon: 'zhenskie-strizhki'
+            link: '/services/nogtevoy-servis/',
+            icon: 'meditsinskiy-pedikyur',
+            hash: 'meditsinskiy-pedikyur'
           },
           {
             key: 5,
             text: 'Уход и лечение',
-            link: '/services/nogtevoy-servis/ukhod-i-lechenie/',
-            icon: 'zhenskie-strizhki'
+            link: '/services/nogtevoy-servis/',
+            icon: 'ukhod-i-lechenie-manicure',
+            hash: 'ukhod-i-lechenie'
           },
         ],
         links: [
@@ -215,13 +229,13 @@ export default {
             icon: 'ruble'
           },
           {
-            key: 0,
+            key: 1,
             main: 'Бесплатная консультация',
             sub: '',
             icon: 'free'
           },
           {
-            key: 1,
+            key: 2,
             main: 'Стерильное оборудование',
             sub: '',
             icon: 'manicure'
@@ -235,7 +249,7 @@ export default {
         ],
       },
       'ostalnye-uslugi': {
-        img: require('@/assets/img/hands_3.png'),
+        img: require('@/assets/img/other.png'),
         data: {
           text: 'Остальные услуги',
           setTextH1: true,
@@ -243,21 +257,31 @@ export default {
         sections: [
           {
             key: 0,
-            text: 'Брови',
-            link: '/services/ostalnye-uslugi/brovi/',
-            icon: 'zhenskie-strizhki'
+            text: 'Окрашивание бровей',
+            link: '/services/ostalnye-uslugi/',
+            icon: 'okrashivanie-brovey',
+            hash: 'okrashivanie-brovey'
           },
           {
             key: 1,
             text: 'Макияж',
-            link: '/services/ostalnye-uslugi/makiyazh/',
-            icon: 'muzhskie-strizhki'
+            link: '/services/ostalnye-uslugi/',
+            icon: 'makeup',
+            hash: 'makiyazh'
           },
           {
             key: 2,
-            text: 'Ресницы',
-            link: '/services/ostalnye-uslugi/resnitsy/',
-            icon: 'oformlenie-borody'
+            text: 'Наращивание ресниц',
+            link: '/services/ostalnye-uslugi/',
+            icon: 'narashchivanie-resnits',
+            hash: 'narashchivanie-resnits'
+          },
+          {
+            key: 3,
+            text: 'Окрашивание ресниц',
+            link: '/services/ostalnye-uslugi/',
+            icon: 'okrashivanie-resnits',
+            hash: 'okrashivanie-resnits'
           },
         ],
         routes: [
@@ -280,7 +304,7 @@ export default {
             key: 3,
           },
           {
-            key: 2,
+            key: 4,
             name: 'Остальные услуги',
             route: '/services/ostalnye-uslugi/',
             current: true,

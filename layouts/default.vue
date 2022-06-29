@@ -1,8 +1,8 @@
 <template>
   <div class="h-screen w-full">
-    <Header class="fixed top-0 left-0 w-full z-10"
-            :class="{'glassmorphism' : $route.path === '/', 'bg-header' : $route.path !== '/'}"/>
-    <main>
+    <Header class=""
+            :class="{'fixed top-0 left-0 w-full z-10' : $device.isDesktopOrTablet, 'glassmorphism' : $route.path === '/' && !$device.isMobile, 'bg-header' : $route.path !== '/' || $device.isMobile}"/>
+    <main :class="{'max-w-screen-xl': $device.isMobile}">
       <Nuxt/>
     </main>
     <Footer/>

@@ -1,60 +1,50 @@
 <template>
-  <div class="grid grid-cols-4 gap-4">
+  <div class="grid grid-cols-4 gap-4" v-if="$device.isDesktopOrTablet">
     <nuxt-link :to="item.link" v-for="item in items" :key="item.key" class="w-72 h-72 cursor-pointer relative"
-         :class="{'col-span-2 w-auto' : (item.key === 1)}">
+               :class="{'col-span-2 w-auto' : (item.key === 1)}">
       <img class="h-full w-full object-cover rounded-md" :src="item.img" :alt="item.text" :title="item.text"/>
       <span class="absolute bottom-4 left-4 text-base bg-white py-2 px-4 uppercase rounded-md">{{ item.text }}</span>
     </nuxt-link>
   </div>
+  <div class="flex flex-row justify-center items-center w-full" v-else>
+    <swiper :options="swiperOptions" v-if="items">
+      <swiper-slide v-for="item in items" :key="item.key">
+        <nuxt-link :to="item.link" class="relative">
+          <div class="flex flex-col justify-center items-center w-11/12 mx-auto relative">
+            <img :src="item.img" :alt="item.text" :title="item.text" height="400" width="400"/>
+            <span class="absolute bottom-4 left-4 text-base bg-white py-2 px-4 uppercase rounded-md">{{
+                item.text
+              }}</span>
+          </div>
+        </nuxt-link>
+      </swiper-slide>
+    </swiper>
+  </div>
 </template>
 <script>
+import {Swiper, SwiperSlide} from 'vue-awesome-swiper'
+import 'swiper/css/swiper.css'
+
 export default {
   name: 'ServicesList',
+  components: {
+    Swiper,
+    SwiperSlide
+  },
+  props: ['items'],
   data: () => ({
-    items: [
-      {
-        key: 0,
-        img: require('@/assets/img/galleryItem.jpg'),
-        text: 'Стрижка',
-        link: '/services/parikmakherskie-uslugi/strizhka/',
+    swiperOptions: {
+      loop: true,
+      initialSlide: 0,
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: true
       },
-      {
-        key: 1,
-        img: require('@/assets/img/galleryItem.jpg'),
-        text: 'Окрашивание волос',
-        link: '/services/parikmakherskie-uslugi/okrashivanie-volos/',
+      preloadImages: false,
+      lazy: {
+        loadPrevNext: true
       },
-      {
-        key: 2,
-        img: require('@/assets/img/galleryItem.jpg'),
-        text: 'Маникюр',
-        link: '/services/nogtevoy-servis/manikyur/',
-      },
-      {
-        key: 3,
-        img: require('@/assets/img/galleryItem.jpg'),
-        text: 'Педикюр',
-        link: '/services/nogtevoy-servis/pedikyur/',
-      },
-      {
-        key: 4,
-        img: require('@/assets/img/galleryItem.jpg'),
-        text: 'Брови',
-        link: '/services/ostalnye-uslugi/brovi/',
-      },
-      {
-        key: 5,
-        img: require('@/assets/img/galleryItem.jpg'),
-        text: 'Макияж',
-        link: '/services/ostalnye-uslugi/makiyazh/',
-      },
-      {
-        key: 6,
-        img: require('@/assets/img/galleryItem.jpg'),
-        text: 'Укладка',
-        link: '/services/parikmakherskie-uslugi/ukladka/',
-      }
-    ]
+    },
   })
 }
 </script>

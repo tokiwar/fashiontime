@@ -127,7 +127,8 @@ export default {
           },
           backgroundImage: {
             'main-page': "url('@/assets/img/time-bg.jpg')",
-            'main-services': "url('@/assets/img/bg-mustache.jpg')"
+            'main-services': "url('@/assets/img/bg-mustache.jpg')",
+            'pattern-salon': "url(@/assets/img/svg/pattern-salon.svg)"
           },
           inset: {
             '1/20': '5%',
@@ -138,10 +139,10 @@ export default {
           colors: {
             'yellow-orange': '#F4AD76',
             'yellow-dark': '#B88355',
-            'header' : '#493325',
-            'sub-header' : '#E5BE8E',
-            'section' : '#FFF5E9',
-            'section-gray' : '#DFE0DF'
+            'header': '#493325',
+            'sub-header': '#E5BE8E',
+            'section': '#FFF5E9',
+            'section-gray': '#DFE0DF'
           },
           fontFamily: {
             'alice': ['Alice'],
@@ -206,6 +207,9 @@ export default {
             'screen-40': '40vh',
             'screen-45': '45vh',
             'screen-50': '50vh',
+            'screen-60': '60vh',
+            'screen-65': '65vh',
+            'screen-70': '70vh',
             'screen-75': '75vh',
             'screen-80': '80vh',
             'screen-85': '85vh'
@@ -250,6 +254,37 @@ export default {
   pwa: {
     manifest: {
       lang: 'en'
+    }
+  },
+  router: {
+    scrollBehavior: async function (to, from, savedPosition) {
+      if (savedPosition) {
+        return savedPosition;
+      }
+      const findEl = async (hash, x = 0) => {
+        return (
+          document.querySelector(hash) ||
+          new Promise(resolve => {
+            if (x > 50) {
+              return resolve(document.querySelector("#app"));
+            }
+            setTimeout(() => {
+              resolve(findEl(hash, ++x || 1));
+            }, 100);
+          })
+        );
+      };
+
+      if (to.hash) {
+        const el = await findEl(to.hash);
+        if ("scrollBehavior" in document.documentElement.style) {
+          return window.scrollTo({top: el.offsetTop - 250, behavior: "smooth"});
+        } else {
+          return window.scrollTo(0, el.offsetTop);
+        }
+      }
+
+      return {x: 0, y: 0};
     }
   },
   robots: {

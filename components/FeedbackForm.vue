@@ -1,7 +1,9 @@
 <template>
-  <form @submit.prevent="formSubmit" ref="form" class="flex flex-col w-2/6 space-y-4">
-    <div class="flex flex-row w-full space-x-4">
-      <div class="w-3/6">
+  <form @submit.prevent="formSubmit" ref="form" class="flex flex-col space-y-4"
+        :class="{'w-2/6' : $device.isDesktopOrTablet, 'w-11/12' : $device.isMobile }">
+    <div class="flex w-full"
+         :class="{'flex-row space-x-4' : $device.isDesktopOrTablet, 'flex-col space-y-4' : $device.isMobile}">
+      <div :class="{'w-3/6' : $device.isDesktopOrTablet}">
         <input :class="{'border-red-500' : validation.hasError('name')}"
                type="text" id="name"
                v-model="name"
@@ -11,7 +13,7 @@
             validation.firstError('name')
           }}</span>
       </div>
-      <div class="w-3/6">
+      <div :class="{'w-3/6' : $device.isDesktopOrTablet}">
         <input :class="{'border-red-500' : validation.hasError('email')}"
                type="text" id="email"
                v-model="email"

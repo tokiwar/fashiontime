@@ -20,126 +20,150 @@ export default {
       {
         key: 0,
         text: 'Парикмахерские услуги',
-        img: require('@/assets/img/galleryItem.jpg'),
+        img: require('@/assets/img/parikmakherskie-uslugi.jpg'),
         link: '/services/parikmakherskie-uslugi/',
         list: [
           {
             key: 0,
             text: 'Женские стрижки',
-            link: '/services/parikmakherskie-uslugi/zhenskie-strizhki/',
-            icon: ''
+            link: '/services/parikmakherskie-uslugi/',
+            icon: '',
+            hash: 'zhenskie-strizhki'
           },
           {
             key: 1,
             text: 'Мужские стрижки',
-            link: '/services/parikmakherskie-uslugi/muzhskie-strizhki/',
-            icon: ''
+            link: '/services/parikmakherskie-uslugi/',
+            icon: '',
+            hash: 'muzhskie-strizhki'
           },
           {
             key: 2,
             text: 'Оформление бороды',
-            link: '/services/parikmakherskie-uslugi/oformlenie-borody/',
-            icon: ''
+            link: '/services/parikmakherskie-uslugi/',
+            icon: '',
+            hash: 'oformlenie-borody'
           },
           {
             key: 3,
             text: 'Детские стрижки',
-            link: '/services/parikmakherskie-uslugi/detskie-strizhki/',
-            icon: ''
+            link: '/services/parikmakherskie-uslugi/',
+            icon: '',
+            hash: 'detskie-strizhki'
           },
           {
             key: 4,
             text: 'Окрашивание волос',
-            link: '/services/parikmakherskie-uslugi/okrashivanie-volos/',
-            icon: ''
+            link: '/services/parikmakherskie-uslugi/',
+            icon: '',
+            hash: 'okrashivanie-volos'
           },
           {
             key: 5,
             text: 'Химическая завивка',
-            link: '/services/parikmakherskie-uslugi/khimicheskaya-zavivka/',
-            icon: 'khimicheskaya-zavivka'
+            link: '/services/parikmakherskie-uslugi/',
+            icon: '',
+            hash: 'khimicheskaya-zavivka'
           },
           {
             key: 6,
             text: 'Кератиновое выпрямление',
-            link: '/services/parikmakherskie-uslugi/keratinovoe-vypryamlenie/',
-            icon: 'keratinovoe-vypryamlenie'
+            link: '/services/parikmakherskie-uslugi/',
+            icon: '',
+            hash: 'keratinovoe-vypryamlenie'
           },
           {
             key: 7,
             text: 'Укладка волос',
-            link: '/services/parikmakherskie-uslugi/ukladka-volos/',
-            icon: ''
+            link: '/services/parikmakherskie-uslugi/',
+            icon: '',
+            hash: 'ukladka-volos'
           }
         ]
       },
       {
         key: 1,
         text: 'Ногтевой сервис',
-        img: require('@/assets/img/galleryItem.jpg'),
+        img: require('@/assets/img/nogtevoy-servis.jpg'),
         link: '/services/nogtevoy-servis/',
         list: [
           {
             key: 0,
             text: 'Маникюр',
-            link: '/services/nogtevoy-servis/manikyur/',
-            icon: ''
+            link: '/services/nogtevoy-servis/',
+            icon: '',
+            hash: 'manikyur'
           },
           {
             key: 1,
             text: 'Педикюр',
-            link: '/services/nogtevoy-servis/pedikyur/',
-            icon: ''
+            link: '/services/nogtevoy-servis/',
+            icon: '',
+            hash: 'pedikyur'
           },
           {
             key: 2,
             text: 'Покрытие ногтей',
-            link: '/services/nogtevoy-servis/pokrytie-nogtey/',
-            icon: ''
+            link: '/services/nogtevoy-servis/',
+            icon: '',
+            hash: 'pokrytie-nogtey'
           },
           {
             key: 3,
             text: 'Наращивание ногтей',
-            link: '/services/nogtevoy-servis/narashchivanie-nogtey/',
-            icon: ''
+            link: '/services/nogtevoy-servis/',
+            icon: '',
+            hash: 'narashchivanie-nogtey'
           },
           {
             key: 4,
             text: 'Медицинский педикюр',
-            link: '/services/nogtevoy-servis/meditsinskiy-pedikyur/',
-            icon: ''
+            link: '/services/nogtevoy-servis/',
+            icon: '',
+            hash: 'meditsinskiy-pedikyur'
           },
           {
             key: 5,
             text: 'Уход и лечение',
-            link: '/services/nogtevoy-servis/ukhod-i-lechenie/',
-            icon: ''
+            link: '/services/nogtevoy-servis/',
+            icon: '',
+            hash: 'ukhod-i-lechenie'
           },
         ]
       },
       {
         key: 2,
         text: 'Остальные услуги',
-        img: require('@/assets/img/galleryItem.jpg'),
+        img: require('@/assets/img/ostalnye-uslugi.jpg'),
         link: '/services/ostalnye-uslugi/',
         list: [
           {
             key: 0,
-            text: 'Брови',
-            link: '/services/ostalnye-uslugi/brovi/',
-            icon: ''
+            text: 'Окрашивание бровей',
+            link: '/services/ostalnye-uslugi/',
+            icon: '',
+            hash: 'okrashivanie-brovey'
           },
           {
             key: 1,
             text: 'Макияж',
-            link: '/services/ostalnye-uslugi/makiyazh/',
-            icon: ''
+            link: '/services/ostalnye-uslugi/',
+            icon: '',
+            hash: 'makiyazh'
           },
           {
             key: 2,
-            text: 'Ресницы',
-            link: '/services/ostalnye-uslugi/resnitsy/',
-            icon: ''
+            text: 'Наращивание ресниц',
+            link: '/services/ostalnye-uslugi/',
+            icon: '',
+            hash: 'narashchivanie-resnits'
+          },
+          {
+            key: 3,
+            text: 'Окрашивание ресниц',
+            link: '/services/ostalnye-uslugi/',
+            icon: '',
+            hash: 'okrashivanie-resnits'
           },
         ]
       },
