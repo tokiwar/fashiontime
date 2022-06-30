@@ -1,9 +1,10 @@
 <template>
-  <div class="bg-section">
-    <section class="h-auto flex py-10 flex-row justify-center items-center mx-auto"
+  <div class="bg-section py-10 flex flex-col justify-center space-y-10">
+    <section class="h-auto flex flex-row justify-center items-center mx-auto"
              :class="{'w-5/6' : $device.isDesktopOrTablet, 'w-11/12' : $device.isMobile}">
       <div
-        class="w-full h-screen-50 bg-cover bg-center flex flex-row justify-around items-center bg-sub-header relative rounded-md">
+        class="w-full bg-cover bg-center flex flex-row justify-around items-center bg-sub-header relative rounded-md"
+        :class="{'h-screen-50' : $device.isDesktopOrTablet, 'h-auto py-4' : $device.isMobile}">
         <div class="flex flex-col h-5/6 space-y-8 justify-around items-center"
              :class="{'max-w-1/2 w-2/5' : $device.isDesktopOrTablet || mobileLandscape}">
           <ul class="text-base font-sans"
@@ -24,7 +25,7 @@
              :src="section.img"/>
       </div>
     </section>
-    <section class="h-auto py-10 flex flex-col items-center justify-center bg-section">
+    <section class="h-auto flex flex-col items-center justify-center bg-section">
       <ul class="grid grid-rows-auto gap-x-12 gap-y-2"
           :class="{'grid-cols-3' : $device.isDesktopOrTablet || mobileLandscape, 'grid-cols-2' : mobilePortrait, 'w-11/12' : $device.isMobile}">
         <li v-for="section in section.sections" :key="section.key">
@@ -36,7 +37,7 @@
         </li>
       </ul>
     </section>
-    <section class="h-auto py-10 flex flex-col items-center justify-center bg-section space-y-8"
+    <section class="h-auto flex flex-col items-center justify-center bg-section space-y-8"
              v-if="$device.isDesktopOrTablet">
       <div class="w-5/6 py-8 px-10 bg-section-gray rounded-md flex flex-row justify-between items-start"
            :id="section.hash"
