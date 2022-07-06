@@ -1,6 +1,6 @@
 <template>
   <section class="flex justify-center items-center text-center"
-           :class="{'flex-row space-x-64 h-screen-35' : $device.isDesktopOrTablet, 'flex-col h-screen-45 space-y-10' : $device.isMobile && $mq === 'sm' , 'flex-col py-10 h-screen-auto space-y-10' : $device.isMobile && $mq === 'md'}">
+           :class="{'flex-row space-x-64 h-screen-35' : $device.isDesktopOrTablet, 'flex-col h-screen-auto py-6 space-y-10' : $device.isMobile && $mq === 'sm' , 'flex-col py-10 h-screen-auto space-y-10' : $device.isMobile && $mq === 'md'}">
     <div class="flex flex-col"
          :class="{'space-y-10' : $device.isDesktopOrTablet}">
       <span class="uppercase font-impact text-yellow-orange text-2xl">Звоните - пишите</span>
