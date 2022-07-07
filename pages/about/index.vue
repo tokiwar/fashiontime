@@ -5,9 +5,7 @@
         <breadcrumbs :routes="routes"/>
       </template>
     </top-section>
-    <section class="h-screen">
-      asdasddf
-    </section>
+    <about/>
   </div>
 </template>
 <script>

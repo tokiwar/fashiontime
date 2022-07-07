@@ -2,11 +2,13 @@
   <div class="">
     <ParallaxSection v-if="$device.isDesktop" :section-data="sectionData"/>
     <NonParallaxSection v-else :section-data="sectionData"/>
-    <about/>
+    <about-section :section-data="aboutSectionData"/>
     <services :items="services"/>
     <gallery :items="galleryItems"/>
     <feedback/>
-    <contacts/>
+    <contacts-section/>
+    <certificate-section/>
+    <reviews-section/>
     <client-only>
       <store-map/>
     </client-only>
@@ -25,6 +27,11 @@ export default {
     }
   },
   data: () => ({
+    aboutSectionData: {
+      title: 'История',
+      img: require('@/assets/img/about-pic-3.jpg'),
+      text: 'Это текст. Нажмите один раз и выберите «Редактировать текст» или просто кликните дважды, чтобы добавить свой текст и настроить шрифт. Вы можете переместить его в любое место на странице. Расскажите посетителям сайта о себе. Здесь будет удачно смотреться текст о вашей компании и услугах. <br>Это текст. Нажмите один раз и выберите «Редактировать текст» или просто дважды кликните, чтобы добавить свой текст и настроить шрифт.'
+    },
     services: [
       {
         key: 0,
