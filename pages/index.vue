@@ -36,44 +36,58 @@ export default {
       {
         key: 0,
         img: require('@/assets/img/galleryItem.jpg'),
-        text: 'Стрижка',
-        link: '/services/parikmakherskie-uslugi/strizhka/',
+        text: 'Женские стрижки',
+        link: '/services/parikmakherskie-uslugi/',
+        icon: '',
+        hash: 'zhenskie-strizhki'
       },
       {
         key: 1,
         img: require('@/assets/img/galleryItem.jpg'),
         text: 'Окрашивание волос',
-        link: '/services/parikmakherskie-uslugi/okrashivanie-volos/',
+        link: '/services/parikmakherskie-uslugi/',
+        icon: '',
+        hash: 'okrashivanie-volos'
       },
       {
         key: 2,
         img: require('@/assets/img/galleryItem.jpg'),
         text: 'Маникюр',
-        link: '/services/nogtevoy-servis/manikyur/',
+        link: '/services/nogtevoy-servis/',
+        icon: '',
+        hash: 'manikyur'
       },
       {
         key: 3,
-        img: require('@/assets/img/galleryItem.jpg'),
         text: 'Педикюр',
-        link: '/services/nogtevoy-servis/pedikyur/',
+        img: require('@/assets/img/galleryItem.jpg'),
+        link: '/services/nogtevoy-servis/',
+        icon: '',
+        hash: 'pedikyur'
       },
       {
         key: 4,
         img: require('@/assets/img/galleryItem.jpg'),
-        text: 'Брови',
-        link: '/services/ostalnye-uslugi/brovi/',
+        text: 'Окрашивание бровей',
+        link: '/services/ostalnye-uslugi/',
+        icon: '',
+        hash: 'okrashivanie-brovey'
       },
       {
         key: 5,
         img: require('@/assets/img/galleryItem.jpg'),
         text: 'Макияж',
-        link: '/services/ostalnye-uslugi/makiyazh/',
+        link: '/services/ostalnye-uslugi/',
+        icon: '',
+        hash: 'makiyazh'
       },
       {
         key: 6,
         img: require('@/assets/img/galleryItem.jpg'),
-        text: 'Укладка',
-        link: '/services/parikmakherskie-uslugi/ukladka/',
+        text: 'Окрашивание ресниц',
+        link: '/services/ostalnye-uslugi/',
+        icon: '',
+        hash: 'okrashivanie-resnits'
       }
     ],
     galleryItems: [

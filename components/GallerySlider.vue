@@ -57,47 +57,47 @@ export default {
         this.page++;
         this.items.push(...[
           {
-            key: 0,
+            key: 9,
             img: require('@/assets/img/nogtevoy-servis.jpg'),
             tag: 'tag1'
           },
           {
-            key: 1,
+            key: 10,
             img: require('@/assets/img/nogtevoy-servis.jpg'),
             tag: 'tag1'
           },
           {
-            key: 2,
+            key: 11,
             img: require('@/assets/img/nogtevoy-servis.jpg'),
             tag: 'tag1'
           },
           {
-            key: 3,
+            key: 12,
             img: require('@/assets/img/nogtevoy-servis.jpg'),
             tag: 'tag1'
           },
           {
-            key: 4,
+            key: 13,
             img: require('@/assets/img/nogtevoy-servis.jpg'),
             tag: 'tag2'
           },
           {
-            key: 5,
+            key: 14,
             img: require('@/assets/img/nogtevoy-servis.jpg'),
             tag: 'tag2'
           },
           {
-            key: 6,
+            key: 15,
             img: require('@/assets/img/nogtevoy-servis.jpg'),
             tag: 'tag2'
           },
           {
-            key: 7,
+            key: 16,
             img: require('@/assets/img/nogtevoy-servis.jpg'),
             tag: 'tag2'
           },
           {
-            key: 8,
+            key: 17,
             img: require('@/assets/img/nogtevoy-servis.jpg'),
             tag: 'tag2'
           },

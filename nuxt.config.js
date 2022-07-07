@@ -107,7 +107,7 @@ export default {
   plugins: [
     {src: '@/plugins/ymapPlugin.js', ssr: false},
     {src: '@/plugins/simple-validator.js', ssr: true},
-    {src: '@/plugins/v-mask.js', ssr: true},
+    {src: '@/plugins/v-mask.js', ssr: true}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components

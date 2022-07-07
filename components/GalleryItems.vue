@@ -1,8 +1,16 @@
 <template>
-  <div class="grid grid-cols-3 grid-rows-auto gap-4" v-if="$device.isDesktopOrTablet">
-    <div v-for="item in items" :key="item.key" class="w-72 h-72 cursor-pointer">
-      <img class="h-full w-full object-cover rounded-md" :src="item.img"/>
+  <div v-if="$device.isDesktopOrTablet">
+    <div class="grid grid-cols-3 grid-rows-auto gap-4">
+      <div v-for="(item, itemIndex) in items" :key="item.key" class="w-72 h-72 cursor-pointer"
+           @click="index = itemIndex">
+        <img class="h-full w-full object-cover rounded-md" :src="item.img"/>
+      </div>
     </div>
+    <CoolLightBox
+      :items="itemsRaw"
+      :index="index"
+      @close="index = null">
+    </CoolLightBox>
   </div>
   <div class="flex flex-row justify-center items-center w-full" v-else>
     <swiper :options="swiperOptions" v-if="items">
@@ -17,15 +25,27 @@
 <script>
 import {Swiper, SwiperSlide} from 'vue-awesome-swiper'
 import 'swiper/css/swiper.css'
+import CoolLightBox from 'vue-cool-lightbox'
+import 'vue-cool-lightbox/dist/vue-cool-lightbox.min.css'
 
 export default {
   name: 'GalleryItems',
   components: {
     Swiper,
-    SwiperSlide
+    SwiperSlide,
+    CoolLightBox
   },
   props: ['items'],
   data: () => ({
+    index: null,
+    itemsRaw: [
+      require('@/assets/img/galleryItem.jpg'),
+      require('@/assets/img/galleryItem.jpg'),
+      require('@/assets/img/galleryItem.jpg'),
+      require('@/assets/img/galleryItem.jpg'),
+      require('@/assets/img/galleryItem.jpg'),
+      require('@/assets/img/galleryItem.jpg'),
+    ],
     swiperOptions: {
       loop: true,
       initialSlide: 0,
