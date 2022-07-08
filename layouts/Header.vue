@@ -9,7 +9,9 @@
             :class="{'text-3xl' : $device.isDesktopOrTablet, 'text-2xl leading-none' : $device.isMobile}">Время<br>красоты</span>
     </div>
     <div class="absolute right-1/20 my-auto text-yellow-50 font-kelly text-2xl" v-if="$device.isDesktopOrTablet">
-      <a href="tel:+79182244461">тел.: 8 (918) 224-44-61</a>
+      <a href="tel:+79182244461" class="flex flex-row justify-center items-center space-x-4">
+        <svg-icon name="phone" class="w-10 h-10"/>
+        <span>8 (918) 224-44-61</span></a>
     </div>
     <top-menu :menu="menu"/>
   </header>

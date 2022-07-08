@@ -142,6 +142,7 @@ export default {
             'yellow-dark': '#B88355',
             'header': '#493325',
             'sub-header': '#E5BE8E',
+            'sub-header-dark': '#ceab7f',
             'section': '#FFF5E9',
             'section-gray': '#DFE0DF'
           },
