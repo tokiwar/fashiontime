@@ -1,3 +1,4 @@
+const dev = !process.env.PRODUCTION;
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   ssr: true,
@@ -113,10 +114,9 @@ export default {
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
 
-  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
-    // https://go.nuxtjs.dev/tailwindcss
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/dotenv'
   ],
 
   tailwindcss: {
@@ -231,14 +231,23 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
-    // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/svg-sprite',
-    // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    '@nuxtjs/proxy',
     '@nuxtjs/device',
     'nuxt-mq',
-    '@nuxtjs/redirect-module'
+    '@nuxtjs/redirect-module',
+    ['@nuxtjs/sitemap',
+      {
+        hostname: 'https://fashiontimekrd.ru/',
+        trailingSlash: true,
+        exclude: [
+          '/vacancies**',
+          '/gallery**'
+        ]
+      }
+    ]
   ],
   redirect: [
     {
@@ -248,8 +257,11 @@ export default {
   ],
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
+    proxy: dev,
+    baseURL: 'https://fashiontimekrd.ru/'
+  },
+  proxy: {
+    '/api': {target: 'https://fashiontimekrd.ru', changeOrigin: true}
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
@@ -293,7 +305,8 @@ export default {
     UserAgent: '*',
     Disallow: [
       '/'
-    ]
+    ],
+    Sitemap: 'https://fashiontimekrd.ru/sitemap.xml'
   },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
